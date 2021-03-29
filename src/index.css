@@ -12,9 +12,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  padding: 2em;
-  
+  background: #f1f1f1;
+  padding: 20px;
 }
 
 code {
@@ -23,8 +22,8 @@ code {
 }
 
 nav {
-  border: 2px solid red;
   text-align: center;
+  padding: 1em;
 }
 
 img {
@@ -103,6 +102,29 @@ img {
   /* border: 1px solid blue; */
 }
 
+input[type=text], .create-area {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.create-container{
+  width: 50%;
+  margin: auto;
+}
+
+.create-area, .edit-area{
+  height: 200px;
+}
+
+.edit-area{
+  width: 100%;
+}
 
 .searchbar {
   padding: 1rem;
@@ -110,20 +132,7 @@ img {
   flex-direction: column;
 }
 
-/* label {
-  font-weight: bold;
-  display: block;
-}
 
-input {
-  padding: 0.25rem;
-  border: none;
-  font-family: inherit;
-  font-size: 1.2em;
-  border-bottom: 2px solid gray;
-  transition: all 0.2s;
-  width: 100%;
-} */
 
 nav a {
   display: inline-block;
@@ -136,6 +145,37 @@ nav a {
 
 h1 {
   border: 1px solid red;
+}
+
+/* MainHomePage */
+
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+.main-card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 @media (min-width: 40rem) {

@@ -8,7 +8,7 @@ import { RiDeleteBin2Line } from "react-icons/ri"
 import { RiFileEditLine } from "react-icons/ri"
 
 
-function PostCards({id, title, image_url, author, description, likes, updateBlog, deleteBlog, currentUser}) {
+function PostCards({id, title, image_url, author, description, likes, updateBlog, deleteBlog, currentUser, setFavPost}) {
 
 
   const[userEditShow, setUserEditShow] = useState(false)
@@ -67,29 +67,27 @@ function PostCards({id, title, image_url, author, description, likes, updateBlog
   }
 
     return (
+      
         <li className="card_item">
           <div className="card">
           <div className="card_image"><img src={image_url} alt={title} /></div>
           <div className="card_content">
-          <h2 className="card_title">{title}</h2>
-            <h4 className="card_author">Author: {author}</h4>
+          <h3 className="card_title">{title}</h3>
+            <h4 className="card_author">{author}</h4>
+            <h4> Dec 7, 2017</h4>
             <div className="icon-container">
             <span className="like" onClick={handleupdateLikes}>
               <AiOutlineLike />:{likes}
             </span>
-                {/* <button className="btn-like" onClick={handleupdateLikes}> clap:{likes}</button> */}
               <span className="fav" onClick={handleFavorites}>
               <AiOutlineStar />
             </span>
-                {/* <button className="btn-fav" onClick={handleFavorites}> add to favorites</button> */}
             <span className="delete" onClick={handleDeletePost}>
               <RiDeleteBin2Line />
             </span>
-                {/* <button className="btn-delete" onClick={handleDeletePost}> delete post</button> */}
             <span className="edit" onClick={handleShowEdit}>
               <RiFileEditLine />
             </span>
-                {/* <button className="btn-edit" onClick={handleShowEdit}>Edit Post</button> */}
                 {userEditShow ? <EditForm author={author} description={description} image_url={image_url} title={title} id={id} currentUser={currentUser} /> : null}
                 </div>
                 <button className="btn-read" onClick={handleDisplay}>Read More</button>

@@ -36,9 +36,8 @@ const allComment = blogComment.map((comment) => {
 
         return(
             <div>
-               <p>hello</p>
-            <h1>{title}</h1>
             <img className="display-image" src={image_url} alt={title} />
+            <h1>{title}</h1>
             <p>{author}</p>
             <p>{description}</p>
             <button className="comment-btn" onClick={handleShowComment}> comment</button>

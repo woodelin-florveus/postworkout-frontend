@@ -10,6 +10,7 @@ import FavoritePost from "./FavoritePost"
 import Comments from "./Comments"
 import DisplayBlog from "./DisplayBlog"
 import Search from "./Search"
+import Main from "./Main"
 
 
 
@@ -20,6 +21,8 @@ function App() {
   const [blogComment, setBlogComment] = useState([])
   const[favPost, setFavPost] = useState([])
   const [search, setSearch] = useState("")
+
+
 
   useEffect(() => {
     const token = localStorage.getItem("token")
@@ -115,6 +118,9 @@ function App() {
           </Route>
           <Route path="/display">
             <DisplayBlog currentUser={currentUser} blogComment={blogComment} />
+          </Route>
+          <Route path="/newhome">
+            <Main />
           </Route>
         </Switch>
         

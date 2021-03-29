@@ -32,10 +32,10 @@ function EditForm({author, title, image_url, id, description, currentUser}){
 
         return(
                 <form onSubmit={handleUpdate} >
-                <input placeholder="Title" name="title" value={editPost.title} onChange={handleChange} />
-                <input placeholder="Image" name="image_url" value={editPost.image_url} onChange={handleChange}/>
-                <input placeholder="Author" name="author" value={editPost.author} onChange={handleChange}/>
-                <textarea placeholder="Share your masterpiece here..." name="description" value={editPost.description} onChange={handleChange} />
+                <input type="text" placeholder="Title" name="title" value={editPost.title} onChange={handleChange} />
+                <input type="text" placeholder="Image" name="image_url" value={editPost.image_url} onChange={handleChange}/>
+                <input type="text" placeholder="Author" name="author" value={editPost.author} onChange={handleChange}/>
+                <textarea className="edit-area" placeholder="Share your masterpiece here..." name="description" value={editPost.description} onChange={handleChange} />
                 <input type="submit" value="Update" />
             </form>
         )

@@ -1,9 +1,14 @@
 import FavCards from "./FavCards"
 
-function FavoritePost({favPost, deleteFav, updateFav}) {
+function FavoritePost({favPost, deleteFav}) {
 
-
-   const allFavs = favPost.map(({id, title, author, description, image_url, likes}) => {
+    // let allFavs;
+    
+    
+//    if(favPost.length > 0) {
+       
+     const allFavs = favPost.map(({id, title, author, description, image_url, likes}) => {
+       
         return(
             <FavCards 
             key={id}
@@ -14,12 +19,12 @@ function FavoritePost({favPost, deleteFav, updateFav}) {
             description={description}
             likes={likes}
             deleteFav={deleteFav}
-            updateFav={updateFav}
             />
         )
    }) 
 
-
+//    }
+   
 
     return (
         <div>

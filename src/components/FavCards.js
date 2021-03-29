@@ -1,6 +1,6 @@
 
 
-function FavCards({id, title, image_url, author, description, likes, deleteFav}){
+function FavCards({id, title, image_url, author, deleteFav}){
 
  
     function handleDelete(){    
@@ -15,9 +15,7 @@ function FavCards({id, title, image_url, author, description, likes, deleteFav})
         <li key={id}>            
             <img className="card-image" src={image_url} alt={title} />
             <h4>{title}</h4>
-            <p>Author: {author}</p>
-            <p>description: {description}</p>
-            <p> clap:{likes}</p>
+            <p>Author: {author}</p>         
             <button className="delete-btn" onClick={handleDelete}> delete post</button>
         </li>
     )
