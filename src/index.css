@@ -1,3 +1,10 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -21,13 +28,81 @@ nav {
 }
 
 img {
-  width: 100%;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
-.card-image{
-  width: 30%;
+/* card properties */
+
+.card_image{
+  max-width: 100%;
   height: auto;
 }
+
+
+ .btn-read {
+  background-color: blue; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin: auto;
+  
+}
+
+.icon-container{
+  margin: auto;
+  margin-left: 1em;
+}
+
+
+.like, .fav, .delete, .edit {
+  font-size: 1.5em;
+  padding: .5em;
+  display: inline-block;
+  color: blue;
+}
+
+.main_card {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card_item {
+  /* display: flex; */
+  padding: 1rem;
+}
+
+.card_content {
+  padding: 1rem;
+  /* background: blue; */
+  border: 1px solid blue;
+}
+
+
+.card {
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* border: 1px solid blue; */
+}
+
 
 .searchbar {
   padding: 1rem;
@@ -61,4 +136,16 @@ nav a {
 
 h1 {
   border: 1px solid red;
+}
+
+@media (min-width: 40rem) {
+  .card_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .card_item {
+    width: 33.3333%;
+  }
 }

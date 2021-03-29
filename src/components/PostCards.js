@@ -1,7 +1,11 @@
 import React, { useState } from "react"
 import { useHistory } from "react-router-dom"
-
 import EditForm from "./EditForm"
+// Icons
+import { AiOutlineLike } from "react-icons/ai"
+import { AiOutlineStar } from "react-icons/ai"
+import { RiDeleteBin2Line } from "react-icons/ri"
+import { RiFileEditLine } from "react-icons/ri"
 
 
 function PostCards({id, title, image_url, author, description, likes, updateBlog, deleteBlog, currentUser}) {
@@ -62,23 +66,36 @@ function PostCards({id, title, image_url, author, description, likes, updateBlog
     console.log(id)
   }
 
-
-
     return (
-      <div className="card">
-      <img className="card-image" src={image_url} alt={title} />
-      <h4>{title}</h4>
-      <p>Author: {author}</p>
-      <p>description: {description}</p>
-      <button className="like-btn" onClick={handleupdateLikes}> clap:{likes}</button>
-      <button className="fav-btn" onClick={handleFavorites}> add to favorites</button>
-      <button className="delete-btn" onClick={handleDeletePost}> delete post</button>
-      <button onClick={handleShowEdit}>Edit Post</button>
-      <button onClick={handleDisplay}>Read More</button>
-      {userEditShow ? <EditForm author={author} description={description} image_url={image_url} title={title} id={id} currentUser={currentUser} /> : null}
-      
-    
-    </div>
+        <li className="card_item">
+          <div className="card">
+          <div className="card_image"><img src={image_url} alt={title} /></div>
+          <div className="card_content">
+          <h2 className="card_title">{title}</h2>
+            <h4 className="card_author">Author: {author}</h4>
+            <div className="icon-container">
+            <span className="like" onClick={handleupdateLikes}>
+              <AiOutlineLike />:{likes}
+            </span>
+                {/* <button className="btn-like" onClick={handleupdateLikes}> clap:{likes}</button> */}
+              <span className="fav" onClick={handleFavorites}>
+              <AiOutlineStar />
+            </span>
+                {/* <button className="btn-fav" onClick={handleFavorites}> add to favorites</button> */}
+            <span className="delete" onClick={handleDeletePost}>
+              <RiDeleteBin2Line />
+            </span>
+                {/* <button className="btn-delete" onClick={handleDeletePost}> delete post</button> */}
+            <span className="edit" onClick={handleShowEdit}>
+              <RiFileEditLine />
+            </span>
+                {/* <button className="btn-edit" onClick={handleShowEdit}>Edit Post</button> */}
+                {userEditShow ? <EditForm author={author} description={description} image_url={image_url} title={title} id={id} currentUser={currentUser} /> : null}
+                </div>
+                <button className="btn-read" onClick={handleDisplay}>Read More</button>
+          </div>
+            </div>
+          </li>
     )
 
 }

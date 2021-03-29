@@ -28,12 +28,11 @@ function PostCollection({ blogPost, updateBlog, deleteBlog, currentUser, blogCom
     })
 
     return (
-        <div>
-        <h1>All Workout Posts</h1>
-        <div className="workout-container">
-            
+       
+        <div className="main">
+        <ul className="main_card">       
             {allPosts}
-        </div>
+            </ul>
         </div>
     )
 }

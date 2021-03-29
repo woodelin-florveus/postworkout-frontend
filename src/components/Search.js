@@ -7,7 +7,7 @@ function Search({search, setSearch}){
     }
 
     return(
-        <div className="ssearchbar">
+        <div className="searchbar">
             <label htmlFor="Search">Search Blogs</label>
             <input 
             type="text"
@@ -22,3 +22,4 @@ function Search({search, setSearch}){
 }
 
 export default Search;
+
