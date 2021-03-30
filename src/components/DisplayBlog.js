@@ -34,16 +34,22 @@ const allComment = blogComment.map((comment) => {
     )
 })
 
+
         return(
-            <div>
-            <img className="display-image" src={image_url} alt={title} />
-            <h1>{title}</h1>
-            <p>{author}</p>
-            <p>{description}</p>
+            <div className="display-container">
+            <div className="display-image">
+            </div>
+            <article className="display-details">
+            <img src={image_url} alt={title} />
+            <h1 className="display-title">{title}</h1>
+            <h3>{author}</h3>
+            <p className="display-text">{description}</p>
+            </article>
             <button className="comment-btn" onClick={handleShowComment}> comment</button>
             {userCommentShow ? <CommentForm blogComment={blogComment}  id={id} setBlogComment={setUserCommentShow} currentUser={currentUser} /> : null}
             <div>Comments: {allComment}</div>
             </div>
+            
         )
     }
 

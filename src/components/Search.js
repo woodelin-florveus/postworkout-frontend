@@ -8,6 +8,7 @@ function Search({search, setSearch}){
 
     return(
         <div className="searchbar">
+            <h1 className="all_post">Latest Posts</h1>
             <label htmlFor="Search">Search Blogs</label>
             <input 
             type="text"

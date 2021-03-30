@@ -29,11 +29,11 @@ function PostCollection({ blogPost, updateBlog, deleteBlog, currentUser, blogCom
 
     return (
        
-        <div className="main">
-        <h1 className="all_post">Latest Post</h1>    
-        <ul className="main_card">   
+        <div className="grid">
+        {/* <h1 className="all_post">Latest Post</h1>     */}
+        {/* <ul className="main_card">    */}
             {allPosts}
-            </ul>
+            {/* </ul> */}
         </div>
     )
 }
