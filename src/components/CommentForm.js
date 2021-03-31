@@ -21,15 +21,16 @@ function CommentForm({currentUser, id}){
             body: JSON.stringify({content: commentForm.content, workout_post_id: id, user_id: currentUser.id})
         })
         .then(response => response.json())
-        .then(setCommentForm({content: ""}))
+        .then(setCommentForm({name: "", content: ""}))
     }
 
   
 
     return (
-        <form onSubmit={handleComment}>
-         comment: <textarea placeholder="Join the discussion..." name="content" value={commentForm.content} onChange={handleChange} />
-         <input type="submit" value="Create" />
+        <form className="comment-form" onSubmit={handleComment}>
+            <label>Comment</label>
+          <textarea className="comment-area" placeholder="Join the discussion..." name="content" value={commentForm.content} onChange={handleChange} />
+         <input type="submit" value="Comment" />
       </form>
     )
 

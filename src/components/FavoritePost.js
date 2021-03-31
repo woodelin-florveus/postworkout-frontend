@@ -22,7 +22,7 @@ function FavoritePost({favPost, deleteFav}) {
 
     return (
         <div className="main">
-        <h1>All favorites</h1>
+        <h1>All Favorites</h1>
         <ul className="main_card">
             {allFavs}
         </ul>

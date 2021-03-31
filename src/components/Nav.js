@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+import {Carousel} from "react-bootstrap"
 
 
 function Nav({currentUser, setCurrentUser}){
@@ -14,9 +14,44 @@ function Nav({currentUser, setCurrentUser}){
 
     return (
         <div>
-        <a href="https://placeholder.com"> 
-            <img src="images/image_1.jpg" alt="header" />
-        </a>
+        {/* <a href="https://placeholder.com"> 
+            <img src="images/image_8.jpg" alt="header" />
+        </a> */}
+
+<Carousel>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="images/image_1.jpg"
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      <h3 className="carousel-header">4 Exercises to Strengthen Your Weak Glutes</h3>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="images/image_7.jpg"
+      alt="Second slide"
+    />
+
+    <Carousel.Caption>
+      <h3 className="carousel-header">3 Core Moves to Improve Your Running Form</h3>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="images/image_8.jpg"
+      alt="Third slide"
+    />
+
+    <Carousel.Caption>
+      <h3 className="carousel-header">Staying Fit During Times of Uncertainty</h3>
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>
 
             <nav>
        

@@ -48,11 +48,11 @@ const [errors, setErrors] = useState([])
 
     return(
         <div>
-     <form onSubmit={handleSubmit}>
+     <form className="profile-form" onSubmit={handleSubmit}>
         <h1>Login</h1>
         <label>Username</label>
         <input
-          type="text"
+          type="login"
           name="name"
           autoComplete="off"
           value={formData.name}

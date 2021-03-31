@@ -16,6 +16,7 @@ function Comments({ blogComment, updateComment, currentUser, deleteComment}){
             />
         )
     })
+    
 
    
     return (

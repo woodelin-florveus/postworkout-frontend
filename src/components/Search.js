@@ -11,8 +11,8 @@ function Search({search, setSearch}){
             <h1 className="all_post">Latest Posts</h1>
             <label htmlFor="Search">Search Blogs</label>
             <input 
-            type="text"
-            id="search"
+            className="search"
+            type="search"
             autoComplete="off"
             value={search}
             onChange={handleSearch}

@@ -28,6 +28,7 @@ function CommentCard({id, likes, currentUser, content, updateComment, deleteComm
     return(
           <div>
             <li>
+              <p>Woodelin</p>
                  <p>{content}</p>
                  <button onClick={updateLike}>Likes: {likes} </button>
                  <button onClick={handleDeleteComment}>delete</button>

@@ -29,7 +29,7 @@ function Profile( { currentUser, setCurrentUser }){
 
     return (
         <div>
-<form onSubmit={handleSubmit}>
+<form className="profile-form" onSubmit={handleSubmit}>
   <h3>Name</h3>
   <input type="text" id="fname" name="name" value={formData.name} onChange={handleChange}/>
   <h3>Email</h3>

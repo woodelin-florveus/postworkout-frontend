@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+
 import { Switch, Route } from "react-router-dom"
 import Signup from "./Signup"
 import Login from "./Login"
@@ -11,6 +12,7 @@ import Comments from "./Comments"
 import DisplayBlog from "./DisplayBlog"
 import Search from "./Search"
 import Main from "./Main"
+
 
 
 
@@ -90,9 +92,11 @@ function App() {
 
   return (
     <div className="App">
+
+
       
       <Nav currentUser={currentUser} setCurrentUser={setCurrentUser} />
-            {currentUser ? <h3>welcome, {currentUser.name}</h3> : <h1>Please Login or Signup</h1>}
+            {currentUser ? <h3 className="username">Welcome, {currentUser.name}</h3> : <h1>Please Login or Signup</h1>}
         <Switch>
         <Route path="/signup">
             <Signup setCurrentUser={setCurrentUser}/>
@@ -117,7 +121,7 @@ function App() {
             <Comments blogComment={blogComment} updateComment={handleUpdateComment} deleteComment={handleDeleteComment} currentUser={currentUser} />
           </Route>
           <Route path="/display">
-            <DisplayBlog currentUser={currentUser} blogComment={blogComment} />
+            <DisplayBlog currentUser={currentUser} blogComment={blogComment} deleteComment={handleDeleteComment} updateComment={handleUpdateComment}  />
           </Route>
           <Route path="/newhome">
             <Main />

@@ -68,37 +68,12 @@ function PostCards({id, title, image_url, author, description, likes, updateBlog
 
     return (
 
-
-  //   <article>
-  //   <img src={image_url} alt="title" />
-  //   <div class="text">
-  //     <h3>{title}</h3>
-  //     <p>{author}</p>
-  //     <span>Dec 7, 2017</span>
-  //     <button className="btn-read" onClick={handleDisplay}>Read More</button>
-  //     <div className="icon-container">
-  //           <span className="like" onClick={handleupdateLikes}>
-  //             <AiOutlineLike />:{likes}
-  //           </span>
-  //             <span className="fav" onClick={handleFavorites}>
-  //             <AiOutlineStar />
-  //           </span>
-  //           <span className="delete" onClick={handleDeletePost}>
-  //             <RiDeleteBin2Line />
-  //           </span>
-  //           <span className="edit" onClick={handleShowEdit}>
-  //             <RiFileEditLine />
-  //           </span>
-  //               {userEditShow ? <EditForm author={author} description={description} image_url={image_url} title={title} id={id} currentUser={currentUser} /> : null}
-  //               </div>
-  //   </div>
-  // </article>
       <article>
          {/* <li className="card_item"> */}
           <div className="card">
           <div className="card_image"><img src={image_url} alt={title} /></div>
           <div className="card_content">
-          <h3 className="card_title">{title}</h3>
+          <h5 className="card_title">{title}</h5>
             {/* <h4 className="card_author">{author}</h4> */}
             <span>{author}</span>
             <h4> Dec 7, 2017</h4>

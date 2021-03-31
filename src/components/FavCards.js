@@ -1,14 +1,24 @@
+import { useHistory } from "react-router-dom"
 import { RiDeleteBin2Line } from "react-icons/ri"
 
 function FavCards({id, title, image_url, author, deleteFav}){
 
- 
+  
+    const history = useHistory()
+
     function handleDelete(){    
             fetch(`http://localhost:3000/fav_posts/${id}`, {
               method: 'DELETE'
             });
             deleteFav(id)
         }
+
+        function handleDisplay(){
+          history.push({
+            pathname: '/display',
+            search: `?query=${id}`,
+          })
+         }
 
        
     return(
@@ -22,7 +32,7 @@ function FavCards({id, title, image_url, author, deleteFav}){
             <span className="delete" onClick={handleDelete}>
               <RiDeleteBin2Line />
             </span>    
-            {/* <button className="delete-btn" onClick={handleDelete}> delete post</button> */}
+            <button className="btn-read" onClick={handleDisplay}>Read More</button>
             </div>
             </div>
         </li>
