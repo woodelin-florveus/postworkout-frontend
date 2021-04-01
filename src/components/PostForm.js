@@ -5,6 +5,7 @@ import { IoLogoInstagram } from "react-icons/io"
 import { GrFacebook } from "react-icons/gr"
 import { FiTwitter } from "react-icons/fi"
 import { FaSnapchatGhost } from "react-icons/fa"
+import { AiOutlineGithub } from "react-icons/ai"
 
 function PostForm({ blogPost, setBlogPost, currentUser}){
 
@@ -51,42 +52,43 @@ fetch('http://localhost:3000/workout_posts', {
           <h2>Cardio that works for anyone</h2>
           <h5>Fasting is not the only option, Dec 7, 2017</h5>
           <div className="fakeimg"><img src="images/image_4.jpg" alt="header" /></div>
-          <p>Some text..</p>
-          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+          <h5>Dane Cook Credits Swimming Workouts for Getting Fit</h5>
+          <p>Dane Cook has enjoyed an impressively chameleon-like run as an actor and comedian in his nearly 30 years of doing comedy. In a recent Instagram post, Cook looked back at just a handful of the myriad roles he's played over that timespan, which have included everything from a break-up artist in Good Luck Chuck to an irreverent restaurant chef in Waiting.</p>
         </div>
         <div className="main-card">
           <h2>Gym trainers are needed more than ever</h2>
           <h5>Trainers are the gatway to your goals, Sep 2, 2017</h5>
           <div className="fakeimg"><img src="images/image_2.jpg" alt="header" /></div>
-          <p>Some text..</p>
-          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+          <h5>A Top Trainer Shared His Best Advice for Building Bigger Quads</h5>
+          <p>There's nothing wrong with a traditional wide stance if you're squatting heavy, but that approach can limit your movement options. "If you squat like this all the time, I suggest you change it up," says Cavaliere. "Neurologically, you're going to benefit from this, because the recruitment pattern you'll develop from this squat is going to be different."</p>
         </div>
       </div>
       <div className="rightcolumn">
         <div className="main-card">
-          <h2>About Me</h2>
-          <div className="fakeimg"><img src="images/image_5.jpg" alt="header" /></div>
+          <h2 className="pop-post">About Me</h2>
+          <div className="fakeimg"><img src="images/image_9.jpeg" alt="header" /></div>
           <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
         </div>
         <div className="main-card">
-          <h3>Popular Post</h3>
+          <h3 className="pop-post">Popular Post</h3>
           <div className="fakeimg"><img src="images/image_6.jpg" alt="header" /></div>
         </div>
         <div className="main-card">
-          <h3>Popular Post</h3>
+          <h3 className="pop-post">Popular Post</h3>
           <div className="fakeimg"><img src="https://blog.myfitnesspal.com/wp-content/uploads/2018/07/What%E2%80%99s-the-Best-Form-of-Cardio-for-Fat-Loss.jpg" alt="header" /></div>
         </div>
         <div className="main-card">
-          <h3>Popular Post</h3>
+          <h3 className="pop-post">Popular Post</h3>
           <div className="fakeimg"><img src="https://images.dickssportinggoods.com/is/image/dksfed/CLP_007_Fitness_HomeGym_0105_S1_PullUp" alt="header" /></div>
         </div>
         <div className="main-card">
-          <h3>Follow Me</h3>
+          <h3 className="pop-post">Follow Me</h3>
           <ul className="social-icons">
             <li><IoLogoInstagram /></li>
             <li><GrFacebook /></li>
             <li><FiTwitter /></li>
             <li><FaSnapchatGhost /></li>
+            <li><a href="https://github.com/woodelin-florveus?tab=repositories"><AiOutlineGithub /></a></li>
           </ul>
         </div>
       </div>

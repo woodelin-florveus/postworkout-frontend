@@ -14,11 +14,10 @@ function Nav({currentUser, setCurrentUser}){
 
     return (
         <div>
-        {/* <a href="https://placeholder.com"> 
-            <img src="images/image_8.jpg" alt="header" />
-        </a> */}
+   <h1 className="header-logo">Post Workout</h1>
 
 <Carousel>
+  
   <Carousel.Item>
     <img
       className="d-block w-100"
@@ -69,8 +68,8 @@ function Nav({currentUser, setCurrentUser}){
                     Favorites
                 </NavLink>
 
-                <NavLink exact to="/comments">
-                    Comments
+                <NavLink exact to="/about">
+                    About
                 </NavLink>
 
                 <NavLink exact to="/profile">

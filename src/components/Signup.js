@@ -47,7 +47,7 @@ function Signup({ setCurrentUser }){
 
     return (
             <div>
-     <form onSubmit={handleSubmit}>
+     <form className="profile-form" onSubmit={handleSubmit}>
         <h1>Signup</h1>
         <label>Username</label>
         <input

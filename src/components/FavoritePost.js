@@ -4,7 +4,7 @@ function FavoritePost({favPost, deleteFav}) {
 
        
      const allFavs = favPost.map(({id, title, author, description, image_url, likes}) => {
-    
+                console.log(id)
         return(
             <FavCards 
             key={id}

@@ -9,6 +9,7 @@ import PostForm from "./PostForm"
 import PostCollection from "./PostCollection"
 import FavoritePost from "./FavoritePost"
 import Comments from "./Comments"
+import About from "./About"
 import DisplayBlog from "./DisplayBlog"
 import Search from "./Search"
 import Main from "./Main"
@@ -123,8 +124,8 @@ function App() {
           <Route path="/display">
             <DisplayBlog currentUser={currentUser} blogComment={blogComment} deleteComment={handleDeleteComment} updateComment={handleUpdateComment}  />
           </Route>
-          <Route path="/newhome">
-            <Main />
+          <Route path="/about">
+            <About />
           </Route>
         </Switch>
         

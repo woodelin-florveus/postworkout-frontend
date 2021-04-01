@@ -210,7 +210,7 @@ nav a {
 }
 
 .fakeimg {
-  background-color: #aaa;
+  /* background-color: #aaa; */
   width: 100%;
   padding: 20px;
 }
@@ -340,6 +340,47 @@ li {
   margin: auto;
   background-color: cornsilk;
   padding: 20px;
+}
+
+/* about page */
+
+.about-header{
+  text-align: center;
+  padding: 20px;
+}
+
+.about-info{
+  width: 88%;
+  text-align: center;
+  margin: auto;
+}
+
+.header-logo {
+  position: absolute;
+  top: 230px;
+  z-index: 1;
+  left: 447px;
+  font-weight: 700;
+  font-size: 5em;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.contact-info{
+  text-align: center;
+}
+
+.user-info{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.user-info a {
+  font-size: 1.5em;
+}
+
+.pop-post{
+  text-align: center;
 }
 
 @media screen and (max-width: 800px) {
